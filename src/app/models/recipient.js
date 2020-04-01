@@ -22,6 +22,12 @@ class Recipient extends Model {
 
     return this;
   }
+
+  fullAddress() {
+    return `${this.street}, ${this.number}${
+      this.complement ? `- ${this.complement}` : ''
+    } - ${this.city}, ${this.state}`;
+  }
 }
 
 export default Recipient;

@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import Recipient from '../models/recipient';
+import Recipient from '../models/Recipient';
 
 class RecipientController {
   async store(req, res) {
@@ -92,7 +92,7 @@ class RecipientController {
     });
   }
 
-  async list(req, res) {
+  async index(req, res) {
     const recipientsList = await Recipient.findAll();
     return res.json(recipientsList);
   }
